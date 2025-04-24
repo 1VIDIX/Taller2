@@ -69,7 +69,7 @@ class Menu : AppCompatActivity() {
             finish()
         }
 
-        findViewById<Button>(R.id.menu3_button).setOnClickListener {
+        findViewById<Button>(R.id.menu3_button2).setOnClickListener {
             startActivity(Intent(this, Menu3::class.java))
             finish()
         }

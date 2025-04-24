@@ -11,7 +11,7 @@ import android.view.View
 import android.widget.ImageView
 import org.w3c.dom.Text
 
-class Iniciar_sesion : AppCompatActivity() {
+class iniciar_sesion : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()

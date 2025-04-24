@@ -12,7 +12,8 @@
         android:layout_height="wrap_content"
         android:background="#5AE4A8"
         app:layout_constraintTop_toTopOf="parent"
-        app:navigationIcon="@drawable/ic_back">
+
+        tools:layout_editor_absoluteX="0dp">
 
         <ImageView
             android:id="@+id/back_button"
