@@ -44,7 +44,7 @@
                     android:textSize="17sp"
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
-                    android:text="@string/ayuda_dos_mitades" />
+                    android:text="@string/ayuda_quitar" />
                 <EditText
                     android:id="@+id/cadena"
                     android:layout_width="match_parent"
@@ -77,13 +77,14 @@
             </LinearLayout>
         </ScrollView>
     </LinearLayout>
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="144dp"
-        android:layout_marginTop="24dp"
-        android:text="Dos mitades"
+        android:layout_marginStart="108dp"
+        android:layout_marginTop="28dp"
+        android:text="Quitar fragmento"
         android:textSize="25sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
