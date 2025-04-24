@@ -3,6 +3,7 @@ package com.example.taller
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -14,7 +15,7 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
 
-        val boton: Button = findViewById(R.id.boton_init)
+        val boton: TextView = findViewById(R.id.boton_init)
         boton.setOnClickListener {
             val intent = Intent(this, iniciar_sesion::class.java)
             startActivity(intent)
