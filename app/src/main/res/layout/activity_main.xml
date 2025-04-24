@@ -17,18 +17,16 @@
 
     <ImageView
         android:id="@+id/coding_illustration"
-        android:layout_width="272dp"
+        android:layout_width="match_parent"
         android:layout_height="600dp"
         android:layout_marginTop="32dp"
         android:layout_marginBottom="64dp"
         android:contentDescription="Coding"
         android:scaleType="fitCenter"
-        android:src="@drawable/coding"
+        android:src="@drawable/img_inicio"
         app:layout_constraintBottom_toTopOf="@+id/boton_init"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHeight_max="2000dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+
+
         app:layout_constraintWidth_percent="0.8" />
 
     <TextView
