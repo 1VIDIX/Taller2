@@ -23,7 +23,7 @@
         android:layout_marginBottom="64dp"
         android:contentDescription="Coding"
         android:scaleType="fitCenter"
-        android:src="@drawable/coding"
+
         app:layout_constraintBottom_toTopOf="@+id/boton_init"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_max="2000dp"

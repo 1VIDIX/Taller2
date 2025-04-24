@@ -41,7 +41,7 @@ class Menu : AppCompatActivity() {
                 val mitad = cantidadCaracteres / 2
 
                 val parte1 = textoIngresado.substring(mitad) // Desde mitad hasta final
-                val parte2 = textoIngresado.substring(mitad, cantidadCaracteres)
+                val parte2 = textoIngresado.substring(0, mitad)
 
                 val resultado = parte1 + parte2
                 texto.setText(resultado)
