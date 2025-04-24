@@ -29,6 +29,11 @@
             android:layout_width="match_parent"
             android:layout_height="589dp"
             android:background="@color/white">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
 
             <TextView
                 android:id="@+id/textView3"
@@ -40,8 +45,37 @@
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
                 android:text="@string/ayuda_dos_mitades" />
-        </ScrollView>
+                <EditText
+                    android:id="@+id/cadena"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:hint="@string/cadena"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:background="@drawable/edit_text_background"
+                    android:padding="12dp"
+                    android:textSize="18sp"/>
 
+                <Button
+                    android:id="@+id/solucionar"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="120sp"
+                    android:layout_width="150dp"
+                    android:layout_height="62dp"
+                    android:text="Solucionar"
+                    android:textColor="@android:color/black"
+                    android:backgroundTint="#00C896"/>
+
+                <TextView
+                    android:id="@+id/resultado"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="30sp"
+                    android:layout_marginStart="135sp"/>
+
+            </LinearLayout>
+        </ScrollView>
     </LinearLayout>
 
     <TextView
@@ -50,7 +84,6 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="144dp"
         android:layout_marginTop="24dp"
-        android:
         android:text="Dos mitades"
         android:textSize="25dp"
         app:layout_constraintStart_toStartOf="parent"
