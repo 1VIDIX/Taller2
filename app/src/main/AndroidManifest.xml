@@ -16,6 +16,12 @@
             android:name=".Menu">
         </activity>
         <activity
+            android:name=".Menu2">
+        </activity>
+        <activity
+            android:name=".Menu3">
+        </activity>
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
