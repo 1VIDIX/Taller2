@@ -13,41 +13,39 @@ import androidx.cardview.widget.CardView
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
-class Menu : AppCompatActivity() {
+class Menu3 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_menu)
 
         val cadena = findViewById<EditText>(R.id.cadena)
+
         val texto = findViewById<TextView>(R.id.resultado)
+
         val solucionar = findViewById<Button>(R.id.solucionar)
 
         solucionar.setOnClickListener {
-            val textoIngresado = cadena.text.toString()
-            val cantidadCaracteres = textoIngresado.length
+            val textoIngresado = cadena.text.toString().lowercase()
 
-            if (cantidadCaracteres % 2 != 0) {
-                val mitad = cantidadCaracteres / 2
+            val cantidadDeH = textoIngresado.count { it == 'h' }
 
-                val parte1 = textoIngresado.substring(mitad) // Desde mitad hasta final
-                val parte2 = textoIngresado.substring(mitad, cantidadCaracteres)                // Texto completo
-                val parte3 = textoIngresado[mitad]           // Caracter en la mitad
+            if (cantidadDeH >= 2) {
 
-                val resultado = parte1 + parte2 + parte3
 
-                texto.setText(resultado)
-            } else {
-                val mitad = cantidadCaracteres / 2
-
-                val parte1 = textoIngresado.substring(mitad) // Desde mitad hasta final
-                val parte2 = textoIngresado.substring(mitad, cantidadCaracteres)
+                val parte1 = textoIngresado.substring(0, textoIngresado.indexOf("h"))
+                val parte2 = textoIngresado.substring(textoIngresado.indexOf("h") + 1, textoIngresado.length)
 
                 val resultado = parte1 + parte2
-                texto.setText(resultado)
-            }
 
+                texto.setText(resultado)
+
+
+            } else {
+                texto.setText("Hay menos de 2 letras 'h'")
+            }
         }
+
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())

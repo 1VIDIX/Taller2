@@ -13,38 +13,31 @@ import androidx.cardview.widget.CardView
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
-class Menu : AppCompatActivity() {
+class Menu2 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_menu)
 
         val cadena = findViewById<EditText>(R.id.cadena)
+
         val texto = findViewById<TextView>(R.id.resultado)
+
         val solucionar = findViewById<Button>(R.id.solucionar)
 
         solucionar.setOnClickListener {
             val textoIngresado = cadena.text.toString()
-            val cantidadCaracteres = textoIngresado.length
+            val posicionEspacio = textoIngresado.indexOf(" ")
 
-            if (cantidadCaracteres % 2 != 0) {
-                val mitad = cantidadCaracteres / 2
+            if (posicionEspacio != -1) {
+                val parte1 = textoIngresado.substring(posicionEspacio + 1, textoIngresado.length)
+                val parte2 = textoIngresado.substring(0, posicionEspacio)
 
-                val parte1 = textoIngresado.substring(mitad) // Desde mitad hasta final
-                val parte2 = textoIngresado.substring(mitad, cantidadCaracteres)                // Texto completo
-                val parte3 = textoIngresado[mitad]           // Caracter en la mitad
-
-                val resultado = parte1 + parte2 + parte3
+                val resultado = parte1 + " " + parte2
 
                 texto.setText(resultado)
             } else {
-                val mitad = cantidadCaracteres / 2
-
-                val parte1 = textoIngresado.substring(mitad) // Desde mitad hasta final
-                val parte2 = textoIngresado.substring(mitad, cantidadCaracteres)
-
-                val resultado = parte1 + parte2
-                texto.setText(resultado)
+                texto.setText("Texto inválido")
             }
 
         }
