@@ -27,9 +27,19 @@
         <ScrollView
             android:id="@+id/scrollView2"
             android:layout_width="match_parent"
-            android:layout_height="560dp"
+            android:layout_height="589dp"
             android:background="@color/white">
 
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_marginTop="70dp"
+                android:layout_marginStart="21dp"
+                android:layout_marginEnd="21dp"
+                android:textSize="17sp"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="@string/ayuda_dos_mitades" />
         </ScrollView>
 
     </LinearLayout>
