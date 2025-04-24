@@ -30,8 +30,8 @@ class Menu : AppCompatActivity() {
             if (cantidadCaracteres % 2 != 0) {
                 val mitad = cantidadCaracteres / 2
 
-                val parte1 = textoIngresado.substring(mitad) // Desde mitad hasta final
-                val parte2 = textoIngresado.substring(mitad, cantidadCaracteres)                // Texto completo
+                val parte1 = textoIngresado.substring(mitad+1) // Desde mitad hasta final
+                val parte2 = textoIngresado.substring(0, mitad)
                 val parte3 = textoIngresado[mitad]           // Caracter en la mitad
 
                 val resultado = parte1 + parte2 + parte3

@@ -33,7 +33,7 @@ class Menu3 : AppCompatActivity() {
             if (cantidadDeH >= 2) {
 
 
-                val parte1 = textoIngresado.substring(0, textoIngresado.indexOf("h"))
+                val parte1 = textoIngresado.substring(0, textoIngresado.indexOf("h")-1)
                 val parte2 = textoIngresado.substring(textoIngresado.indexOf("h") + 1, textoIngresado.length)
 
                 val resultado = parte1 + parte2
